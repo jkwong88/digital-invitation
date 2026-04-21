@@ -15,7 +15,8 @@ const cormorant = Cormorant_Garamond({
 });
 
 const noto = Noto_Serif_SC({
-  subsets: ['chinese-simplified'],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  subsets: ['chinese-simplified' as any],
   weight: ['400', '700'],
   variable: '--font-noto',
 });
