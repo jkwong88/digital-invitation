@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git -C /Users/kun/Downloads/PersonalProject/digital_invitation log --oneline)",
+      "Bash(node_modules/.bin/ts-jest --version)",
+      "Bash(node_modules/.bin/jest --version)",
+      "Bash(git -C /Users/kun/Downloads/PersonalProject/digital_invitation diff 82c9bf8 f1bbe79 --stat)"
+    ]
+  }
+}

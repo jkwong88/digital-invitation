@@ -1,0 +1,54 @@
+<h2>Design — Architecture</h2>
+<p class="subtitle">Does this overall structure look right? Let me know in the terminal.</p>
+
+<div class="section">
+  <h3>Project Structure</h3>
+  <div class="mockup">
+    <div class="mockup-header">Next.js App (single repo → GitHub → Vercel)</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:1.8">
+      digital-invitation/<br>
+      &nbsp;&nbsp;app/<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;page.tsx &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#888">← single-page invitation</span><br>
+      &nbsp;&nbsp;&nbsp;&nbsp;layout.tsx<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;api/<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rsvp/route.ts &nbsp;&nbsp;<span style="color:#888">← POST handler → Google Sheets</span><br>
+      &nbsp;&nbsp;components/<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Hero.tsx<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;LoveStory.tsx<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Calendar.tsx<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Countdown.tsx<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;PhotoGallery.tsx<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;RsvpForm.tsx<br>
+      &nbsp;&nbsp;public/images/ &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#888">← your couple photos here</span><br>
+      &nbsp;&nbsp;.env.local &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#888">← Google credentials (not committed)</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Page Sections (top → bottom)</h3>
+  <ol style="line-height:2;padding-left:20px">
+    <li><strong>Hero</strong> — full-screen photo, date, venue, floating music button placeholder</li>
+    <li><strong>Love Story</strong> — "OUR LOVE STORY" heading + photo + Chinese romantic text</li>
+    <li><strong>Invitation Letter</strong> — Chinese poem text + "2026.11.14 我们，婚礼见~"</li>
+    <li><strong>Calendar</strong> — November 2026 grid, 14th highlighted with heart</li>
+    <li><strong>Countdown</strong> — "SAVE THE DATE" + live days/hours/min/sec timer + two historical photos (2017, 2019)</li>
+    <li><strong>Photo Gallery</strong> — horizontal scrollable strip of couple photos + "FOREVER AND EVER" text</li>
+    <li><strong>RSVP</strong> — Name / Pax / Phone form → submits to Google Sheets</li>
+    <li><strong>Footer</strong> — "SEE YOU SOON / 我们期待与您共度美好时刻"</li>
+  </ol>
+</div>
+
+<div class="section">
+  <h3>RSVP Data Flow</h3>
+  <div class="mockup">
+    <div class="mockup-header">RSVP Flow</div>
+    <div class="mockup-body" style="text-align:center;font-size:14px;line-height:2.2">
+      Guest fills form<br>↓<br>
+      POST /api/rsvp (Next.js API route)<br>↓<br>
+      Google Sheets API (service account auth)<br>↓<br>
+      New row appended to your Google Sheet<br>
+      <span style="color:#888;font-size:12px">[timestamp | name | pax | phone]</span>
+    </div>
+  </div>
+</div>

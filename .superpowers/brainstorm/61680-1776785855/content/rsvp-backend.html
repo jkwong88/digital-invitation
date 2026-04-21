@@ -1,0 +1,26 @@
+<h2>How should RSVP submissions be stored?</h2>
+<p class="subtitle">When a guest submits their name, pax count, and phone number — where should that data go?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Google Sheets</h3>
+      <p>Each RSVP writes a row to a Google Sheet. Easy to view and manage without any database setup.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Simple database (SQLite / PostgreSQL)</h3>
+      <p>Submissions stored in a proper database. Requires hosting a backend server.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Email notification only</h3>
+      <p>Each RSVP sends you an email with the guest's details. No database needed.</p>
+    </div>
+  </div>
+</div>

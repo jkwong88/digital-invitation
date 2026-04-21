@@ -7,8 +7,11 @@ const config: Config = {
     '^@/(.*)$': '<rootDir>/$1',
   },
   transform: {
-    '^.+\\.tsx?$': ['ts-jest', { tsconfig: { jsx: 'react-jsx' } }],
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: './tsconfig.test.json' }],
   },
+  transformIgnorePatterns: [
+    '/node_modules/(?!(googleapis)/)',
+  ],
   testMatch: ['**/__tests__/**/*.test.{ts,tsx}'],
   testPathIgnorePatterns: ['/node_modules/', '/.next/'],
 };

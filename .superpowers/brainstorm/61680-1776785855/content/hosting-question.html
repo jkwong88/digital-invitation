@@ -1,0 +1,26 @@
+<h2>Where do you want to host this?</h2>
+<p class="subtitle">This affects how the backend (RSVP API) and frontend are deployed.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Vercel (recommended)</h3>
+      <p>Free tier, deploys automatically from GitHub, supports serverless API routes. Zero server management.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Netlify + Netlify Functions</h3>
+      <p>Similar to Vercel — free tier, GitHub integration, serverless functions for the RSVP API.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Self-hosted VPS (e.g. DigitalOcean, Linode)</h3>
+      <p>Full control, runs a Node.js server. Requires more setup and a monthly cost (~$5–12/mo).</p>
+    </div>
+  </div>
+</div>

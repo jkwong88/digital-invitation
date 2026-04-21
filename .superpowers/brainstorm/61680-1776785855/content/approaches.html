@@ -1,0 +1,38 @@
+<h2>Tech stack — 3 approaches</h2>
+<p class="subtitle">Pick the one that fits best. I've marked my recommendation.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>⭐ Next.js (React) — Recommended</h3>
+      <p>Full-stack framework with built-in API routes for RSVP → Google Sheets. Deploys to Vercel in one click from GitHub. Mobile-first CSS with smooth scroll animations. Best Vercel integration, largest community.</p>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>Native Vercel support</li><li>API routes = no separate backend</li><li>React ecosystem for animations</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Heavier than plain HTML</li><li>Requires npm/build step</li></ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Plain HTML/CSS/JS + Vercel Serverless Function</h3>
+      <p>Static HTML pages with vanilla JS for countdown/animations. One serverless function handles RSVP. No framework, no build step.</p>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>Simplest possible setup</li><li>Fastest load time</li><li>No framework to learn</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>More manual CSS work</li><li>Harder to manage as complexity grows</li></ul></div>
+      </div>
+    </div>
+  </div>
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Astro + Vercel</h3>
+      <p>Static site generator — outputs pure HTML with zero JS by default, adds JS only where needed. Excellent performance. Vercel serverless for RSVP API.</p>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>Best performance (minimal JS)</li><li>Great for content-heavy pages</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Smaller community than Next.js</li><li>Less familiar syntax</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>

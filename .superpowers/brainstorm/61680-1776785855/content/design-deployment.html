@@ -1,0 +1,44 @@
+<h2>Design — Deployment & GitHub</h2>
+<p class="subtitle">How the project is versioned and hosted.</p>
+
+<div class="section">
+  <h3>GitHub Setup</h3>
+  <div class="mockup">
+    <div class="mockup-body" style="line-height:2">
+      1. Create a GitHub repo (public or private)<br>
+      2. Push the Next.js project<br>
+      3. Add <code>.env.local</code> to <code>.gitignore</code> — secrets stay local<br>
+      4. On Vercel: connect the GitHub repo → auto-deploy on every push to <code>main</code>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Environment Variables</h3>
+  <div class="mockup">
+    <div class="mockup-header">.env.local (local) / Vercel Dashboard (production)</div>
+    <div class="mockup-body" style="font-family:monospace;font-size:13px;line-height:2">
+      GOOGLE_SERVICE_ACCOUNT_EMAIL=xxx@yyy.iam.gserviceaccount.com<br>
+      GOOGLE_PRIVATE_KEY="-----BEGIN RSA PRIVATE KEY-----..."<br>
+      GOOGLE_SHEET_ID=your-spreadsheet-id
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Deploy Workflow</h3>
+  <div class="mockup">
+    <div class="mockup-body" style="text-align:center;font-size:14px;line-height:2.5">
+      Edit code locally<br>↓<br>
+      <code>git push origin main</code><br>↓<br>
+      Vercel auto-builds &amp; deploys (~30 sec)<br>↓<br>
+      Live at <strong>your-project.vercel.app</strong><br>
+      <span style="color:#888;font-size:12px">(optionally connect a custom domain)</span>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Performance target</h3>
+  <p>Vercel's CDN + Next.js image optimization handles 30+ simultaneous opens easily. Static sections are served from the edge; only the RSVP POST hits a serverless function.</p>
+</div>
