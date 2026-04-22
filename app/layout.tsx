@@ -30,7 +30,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh">
       <body className={`${playfair.variable} ${cormorant.variable} ${noto.variable} antialiased`}>
-        {children}
+        <div className="h-screen bg-stone-200 flex justify-center">
+          <div className="w-full max-w-[400px] h-full max-h-[956px] overflow-y-auto bg-white">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

@@ -18,9 +18,10 @@ function CountdownBlock({ value, label }: { value: number; label: string }) {
 }
 
 export default function CountdownSection() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft(WEDDING_DATE));
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {
+    setTimeLeft(calculateTimeLeft(WEDDING_DATE));
     const timer = setInterval(() => {
       setTimeLeft(calculateTimeLeft(WEDDING_DATE));
     }, 1000);
@@ -53,10 +54,10 @@ export default function CountdownSection() {
           <div className="flex gap-4 items-start">
             {/* Countdown blocks */}
             <div className="flex flex-col gap-3">
-              <CountdownBlock value={timeLeft.days} label="DAY" />
-              <CountdownBlock value={timeLeft.hours} label="HOUR" />
-              <CountdownBlock value={timeLeft.minutes} label="MIN" />
-              <CountdownBlock value={timeLeft.seconds} label="SEC" />
+              <CountdownBlock value={timeLeft?.days ?? 0} label="DAY" />
+              <CountdownBlock value={timeLeft?.hours ?? 0} label="HOUR" />
+              <CountdownBlock value={timeLeft?.minutes ?? 0} label="MIN" />
+              <CountdownBlock value={timeLeft?.seconds ?? 0} label="SEC" />
             </div>
 
             {/* Side content */}
