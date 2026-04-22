@@ -6,7 +6,7 @@ export default function RsvpSection() {
   return (
     <section>
       {/* Background photo */}
-      <div className="relative h-72 w-full overflow-hidden">
+      <div className="relative aspect-video w-full overflow-hidden">
         <Image
           src="/images/rsvp-bg.jpg"
           alt="RSVP background"
