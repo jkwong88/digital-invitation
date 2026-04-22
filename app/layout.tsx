@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="zh">
       <body className={`${playfair.variable} ${cormorant.variable} ${noto.variable} antialiased`}>
         <div className="h-screen bg-stone-200 flex justify-center">
-          <div className="w-full max-w-[400px] h-full max-h-[956px] overflow-y-auto bg-white">
+          <div className="w-full max-w-[400px] h-full max-h-[956px] overflow-y-auto bg-white snap-y snap-mandatory">
             {children}
           </div>
         </div>

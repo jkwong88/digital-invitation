@@ -10,14 +10,14 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <LoveStory />
-      <InvitationLetter />
-      <CalendarSection />
-      <CountdownSection />
-      <PhotoGallery />
-      <RsvpSection />
-      <Footer />
+      <div className="snap-start"><Hero /></div>
+      <div className="snap-start"><LoveStory /></div>
+      <div className="snap-start"><InvitationLetter /></div>
+      <div className="snap-start"><CalendarSection /></div>
+      <div className="snap-start"><CountdownSection /></div>
+      <div className="snap-start"><PhotoGallery /></div>
+      <div className="snap-start"><RsvpSection /></div>
+      <div className="snap-start"><Footer /></div>
     </main>
   );
 }
